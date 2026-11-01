@@ -1,3 +1,56 @@
+# UMKM Course Hub 🚀
+
+> **Platform E-Learning & Literasi Kewirausahaan Digital untuk Pelaku Usaha Mikro, Kecil, dan Menengah (UMKM)**
+
+Aplikasi berbasis web yang dibangun menggunakan **Laravel 11**, **Tailwind CSS**, dan **MySQL** untuk membantu pelaku UMKM mempelajari strategi pemasaran, pencatatan kas, dan sertifikasi produk secara mandiri dan terstruktur.
+
+---
+
+## 🎨 Design System
+Platform ini mengadopsi palet warna resmi **"Arctic Reflection"** untuk menghadirkan antarmuka yang bersih, tenang, dan profesional:
+- **Primary (`#243C4C`)**: Header thumbnail, tombol utama, filter aktif, dan navigasi.
+- **Secondary (`#5289AD`)**: Teks link interaktif, fokus input, dan tombol aksi sekunder.
+- **Surface (`#F4FCFB`)**: Latar belakang aplikasi.
+
+---
+
+## ✨ Fitur Utama
+
+### 👤 Role Peserta (Pelaku UMKM)
+- **Registrasi & Autentikasi**: Registrasi khusus pelaku usaha dengan menyertakan nama usaha.
+- **Katalog Kursus Interaktif**: Pencarian instan (*live search* debounce 300ms), filter kategori, dan badge penanda status terdaftar.
+- **Pendaftaran Kelas Instan (*Free Enrollment*)**: Satu klik tanpa biaya, otomatis langsung diarahkan ke materi pertama.
+- **Ruang Belajar (*Course Player*)**: Video player responsif (YouTube embed), rangkuman bacaan, dan tombol navigasi materi.
+- **Pelacak Kemajuan Mandiri**: Tombol toggle "Tandai Selesai", bar persentase penyelesaian kursus, dan modal kelulusan formal.
+- **Kelas Saya**: Daftar kursus aktif dengan pagination teratur (6 item per halaman).
+
+### 🛠️ Role Administrator
+- **Dasbor Metrik Operasional**: Statistik total kursus, total materi, total peserta UMKM, total pendaftaran, dan riwayat aktivitas pendaftaran terkini.
+- **Manajemen Kategori & Kursus (Modal UI)**: Tambah dan ubah data langsung melalui modal dialog tanpa me-reload halaman.
+- **Manajemen Materi (*Drag & Drop Reordering*)**: Pengurutan silabus materi menggunakan SortableJS tanpa hambatan lintas halaman.
+- **Integritas Relasi Basis Data**: Proteksi pencegahan hapus kursus/kategori yang masih memiliki data turunan aktif.
+- **Pencegahan Stale Data**: Proteksi `PreventBackHistory Middleware` dan penyeragaman zona waktu `Asia/Jakarta` (WIB).
+
+---
+
+## 💻 Tech Stack
+- **Backend Framework**: Laravel 11 (PHP 8.2+)
+- **Frontend / Styling**: Blade Engine + Tailwind CSS v3
+- **Interaktivitas**: Alpine.js & SortableJS
+- **Database**: MySQL 8.0
+- **Build Tool**: Vite
+
+---
+
+## 🚀 Panduan Instalasi Lokal
+
+### 1. Kloning Repositori
+```bash
+git clone [https://github.com/](https://github.com/)<username-anda>/umkm-course-hub.git
+cd umkm-course-hub
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
