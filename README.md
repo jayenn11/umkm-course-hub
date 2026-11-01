@@ -45,7 +45,7 @@ Platform ini mengadopsi palet warna resmi **"Arctic Reflection"** untuk menghadi
 ## 🚀 Panduan Instalasi Lokal
 
 ### 1. Kloning Repositori
-git clone https://github.com/<username-anda>/umkm-course-hub.git
+git clone https://github.com/jayenn11/umkm-course-hub.git
 cd umkm-course-hub
 
 ### 2. Pasang Dependensi
