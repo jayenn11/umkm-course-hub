@@ -45,9 +45,46 @@ Platform ini mengadopsi palet warna resmi **"Arctic Reflection"** untuk menghadi
 ## 🚀 Panduan Instalasi Lokal
 
 ### 1. Kloning Repositori
-```bash
-git clone [https://github.com/](https://github.com/)<username-anda>/umkm-course-hub.git
+git clone https://github.com/<username-anda>/umkm-course-hub.git
 cd umkm-course-hub
+
+### 2. Pasang Dependensi
+composer install
+npm install
+
+### 3. Konfigurasi Lingkungan (.env)
+cp .env.example .env
+php artisan key:generate
+
+Sesuaikan konfigurasi basis data pada `.env`:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=umkm_course_hub
+DB_USERNAME=root
+DB_PASSWORD=
+
+### 4. Migrasi & Seeding Data
+php artisan migrate --seed
+
+### 5. Kompilasi Aset & Jalankan Server
+# Terminal 1: Kompilasi aset frontend
+npm run dev
+
+# Terminal 2: Jalankan web server lokal
+php artisan serve
+
+Akses aplikasi melalui peramban: http://127.0.0.1:8000
+
+---
+
+## 🔑 Kredensial Akun Uji Coba
+
+| Peran (Role)      | Email                        | Password   | Keterangan                       |
+| :---------------- | :--------------------------- | :--------- | :------------------------------- |
+| **Administrator** | `admin@umkm.id`              | `password` | Akses penuh modul `/admin`       |
+| **Peserta UMKM**  | `fajartrysutrasno@gmail.com` | `password` | Akun peserta dengan profil usaha |
+
 
 
 
